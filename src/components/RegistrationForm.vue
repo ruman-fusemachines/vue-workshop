@@ -33,8 +33,28 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  name: "RegistrationForm"
+  name: "RegistrationForm",
+  data(){
+    return {
+      name: "",
+      email: "",
+      password: "", 
+    }
+  },
+  methods:{
+    async handleSubmit(){
+      try{
+          const response = await axios.post("url", {
+            data: {hello: "hello"}
+          })
+      }catch(error){
+
+      }
+    }
+  }
 };
 </script>
 
